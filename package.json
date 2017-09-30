@@ -1,0 +1,8 @@
+{
+  "name": "electron-docs",
+  "version": "0.0.1",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^1.7.8"
+  }
+}
