@@ -1,16 +1,18 @@
-## electron-docs ##
-Google Docs desktop app
+![Logo](http://res.cloudinary.com/vista1nik/image/upload/c_scale,w_320/v1507380163/gdocs-logo_yn2kkh.png)
+## GDocs ##
+----------
+Unoffical Google Docs desktop app
 
 **Run:**
  
 
-    npm install electron
+    npm install electron --save
     electron .
 
 **Build:**
 
-    npm install electron
-    npm install electron-packager
+    npm install electron --save
+    npm install electron-packager --save
  Windows:
  
 
