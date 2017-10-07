@@ -1,4 +1,4 @@
-![Logo](http://res.cloudinary.com/vista1nik/image/upload/c_scale,w_320/v1507380163/gdocs-logo_yn2kkh.png)
+![Logo](https://cdn.rawgit.com/Vista1nik/GDocs/49cb3d76/assets/icons/web/312x312.png)
 ## GDocs ##
 Unofficial Google Docs desktop app
 
