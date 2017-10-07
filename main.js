@@ -8,7 +8,10 @@ let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 800, height: 600})
+  win = new BrowserWindow({width: 800, 
+    height: 600,
+    icon: path.join(__dirname, 'assets/icons/png/64x64.png') //App icon
+  })
 
   // and load the index.html of the app.
   win.loadURL(url.format({
@@ -17,7 +20,7 @@ function createWindow () {
     slashes: true
   }))
 
-  // Open the DevTools.
+  // Disable top menu
   win.setMenu(null)
 
   
