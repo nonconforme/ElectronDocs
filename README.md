@@ -1,6 +1,5 @@
 ![Logo](http://res.cloudinary.com/vista1nik/image/upload/c_scale,w_320/v1507380163/gdocs-logo_yn2kkh.png)
 ## GDocs ##
-----------
 Unoffical Google Docs desktop app
 
 **Run:**
