@@ -15,7 +15,7 @@ Unofficial Google Docs desktop app
  Windows:
  
 
-    electron-packager . --overwrite --platform=win32 --arch=x64
+    electron-packager . --overwrite --platform=win32 --arch=x64 icon=assets/icons/win/icon.ico
   macOS:
   
 
