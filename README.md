@@ -5,13 +5,13 @@ Unofficial Google Docs desktop app
 **Run:**
  
 
-    npm install electron --save
+    npm install
     electron .
 
 **Build:**
 
-    npm install electron --save
-    npm install electron-packager --save
+    npm install
+    npm install electron-packager --save-dev
  Windows:
  
 
