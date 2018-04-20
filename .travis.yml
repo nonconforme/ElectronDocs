@@ -1,0 +1,26 @@
+os:
+  - linux
+
+before_install:
+  - chmod +x ./scripts/travis-build.sh
+
+language: node_js
+
+node_js:
+  - '9'
+
+branches:
+  only:
+    - master
+    - beta
+
+script: ./scripts/travis-build.sh
+
+cache:
+  directories:
+    - node_modules
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
