@@ -8,14 +8,9 @@
     let win = e.data;
     win.webContents.on('new-window', (event, url) => {
     event.preventDefault()
-     if ( url.includes("docs.google.com") ) {
-         let CleanURL = url.replace("https://", "")
-       
-         // DON'T WORK
-       createDocsWindow(CleanURL);
-     } else {
-      require('electron').shell.openExternal(url)
-    }
+     if ( url.includes("docs.google.com") != true ) {
+        require('electron').shell.openExternal(url)
+     }
    })
 })
 
