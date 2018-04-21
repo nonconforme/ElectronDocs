@@ -2,6 +2,10 @@
 ## GDocs ##
 Unofficial Google Docs desktop app
 
+### Screenshot
+![](https://raw.githubusercontent.com/Vista1nik/vista1nik.github.io/master/gdocs/assets/images/gdocs-screenshot-833x634.png)
+
+
 **Run:**
  
 
