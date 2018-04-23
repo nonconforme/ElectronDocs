@@ -1,11 +1,11 @@
 {
-  "name": "GDocs",
+  "name": "ThunderDocs",
   "version": "0.0.1",
   "main": "main.js",
   "dependencies": {
     "electron": "^1.8.4",
     "eslint": "^4.19.1",
-    "mocha": "^5.1.0",
+    "mocha": "^5.1.1",
     "spectron": "^3.8.0"
   },
   "engines": {
