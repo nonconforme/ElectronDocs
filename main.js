@@ -1,6 +1,9 @@
+const firstlineofjs = "First Line Of JavaScript"
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 const url = require('url')
+
+let readyWindow;
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -81,7 +84,8 @@ function createWindow () {
         {role: 'zoomin'},
         {role: 'zoomout'},
         {type: 'separator'},
-        {role: 'togglefullscreen'}
+        {role: 'togglefullscreen'},
+        {role: 'toggledevtools'}
       ]
     },
     {
@@ -145,7 +149,26 @@ function createWindow () {
 
   // END OF MENU SECTION
 
-  
+
+  //New window creation Funtion
+  function createDocsWindow(docurl) {
+
+    var NewWin = new BrowserWindow(
+      {
+      width: 800, 
+      height: 600,
+      icon: path.join(__dirname, 'assets/icons/png/64x64.png') //App icon
+    }
+  ); 
+  let CleanURL = docurl.replace("https://", "")
+  console.log(CleanURL)
+  NewWin.loadURL(url.format({
+    pathname: path.join( CleanURL ),
+    protocol: 'https:',
+    slashes: true
+  }))
+
+  }
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -153,6 +176,13 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     win = null
+  })
+    
+
+ // Add Parametrs Worker
+ win.once('did-finish-load', () => {
+    let Parametrs = new Worker("params.js"); // Create New Worker
+    Parametrs.postMessage(win) // Send Window Data to Worker
   })
 }
 
