@@ -150,7 +150,7 @@ function createWindow () {
   // END OF MENU SECTION
 
 
-  //New window creation Funtion
+  // New window creation Funtion
   function createDocsWindow(docurl) {
 
     var NewWin = new BrowserWindow(
@@ -179,12 +179,13 @@ function createWindow () {
   })
     
 
- // Add Parametrs Worker
+ /* Add Parametrs Worker
  win.once('did-finish-load', () => {
     let Parametrs = new Worker("params.js"); // Create New Worker
     Parametrs.postMessage(win) // Send Window Data to Worker
   })
 }
+*/
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
