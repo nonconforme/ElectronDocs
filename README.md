@@ -2,12 +2,14 @@
 ## ThunderDocs ##
 [![Build Status](https://travis-ci.org/Vista1nik/ThunderDocs.svg?branch=master)](https://travis-ci.org/Vista1nik/ThunderDocs)
  ![Github All Releases](https://img.shields.io/github/downloads/Vista1nik/GDocs/total.svg)
+ ![Electron Version](https://img.shields.io/badge/Electron-1.8.4-brightgreen.svg)
  
 Unofficial Google Docs desktop app
 
 ### Screenshot
 ![](https://raw.githubusercontent.com/Vista1nik/vista1nik.github.io/master/gdocs/assets/images/gdocs-screenshot-833x634.png)
 
+## Building and Running ##
 
 **Run:**
  
