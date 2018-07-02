@@ -8,7 +8,8 @@ let win
 
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 800, 
+  win = new BrowserWindow({
+    width: 800, 
     height: 600,
     icon: path.join(__dirname, 'assets/icons/png/64x64.png') //App icon
   })
@@ -21,7 +22,129 @@ function createWindow () {
   }))
 
   // Disable top menu
-  win.setMenu(null)
+  //win.setMenu(null)
+
+  const {app, Menu} = require('electron')
+  
+  const template = [
+    {
+      label: 'File',
+      submenu: [
+        {
+          label: "New Window",
+          // Create New browser Window
+
+          click () { var NewWin = new BrowserWindow(
+            {
+            width: 800, 
+            height: 600,
+            icon: path.join(__dirname, 'assets/icons/png/64x64.png') //App icon
+          }
+        ); 
+        
+        NewWin.loadURL(url.format({
+          pathname: path.join('docs.google.com'),
+          protocol: 'https:',
+          slashes: true
+        }))
+        }
+        },
+
+        {type: 'separator'},
+
+        {
+          label: "Exit",
+          click () {win = null}
+        }
+      ]
+    },
+    {
+      label: 'Edit',
+      submenu: [
+        {role: 'undo'},
+        {role: 'redo'},
+        {type: 'separator'},
+        {role: 'cut'},
+        {role: 'copy'},
+        {role: 'paste'},
+        {role: 'pasteandmatchstyle'},
+        {role: 'delete'},
+        {role: 'selectall'}
+      ]
+    },
+    {
+      label: 'View',
+      submenu: [
+        {role: 'reload'},
+        {role: 'forcereload'},
+        {type: 'separator'},
+        {role: 'resetzoom'},
+        {role: 'zoomin'},
+        {role: 'zoomout'},
+        {type: 'separator'},
+        {role: 'togglefullscreen'}
+      ]
+    },
+    {
+      role: 'window',
+      submenu: [
+        {role: 'minimize'},
+        {role: 'close'}
+      ]
+    },
+    {
+      role: 'help',
+      submenu: [
+        {
+          label: 'GitHub',
+          click () { require('electron').shell.openExternal('https://github.com/vista1nik/gdocs') }
+        }
+      ]
+    }
+  ]
+  
+  if (process.platform === 'darwin') {
+    template.unshift({
+      label: app.getName(),
+      submenu: [
+        {role: 'about'},
+        {type: 'separator'},
+        {role: 'services', submenu: []},
+        {type: 'separator'},
+        {role: 'hide'},
+        {role: 'hideothers'},
+        {role: 'unhide'},
+        {type: 'separator'},
+        {role: 'quit'}
+      ]
+    })
+  
+    // Edit menu
+    template[1].submenu.push(
+      {type: 'separator'},
+      {
+        label: 'Speech',
+        submenu: [
+          {role: 'startspeaking'},
+          {role: 'stopspeaking'}
+        ]
+      }
+    )
+  
+    // Window menu
+    template[3].submenu = [
+      {role: 'close'},
+      {role: 'minimize'},
+      {role: 'zoom'},
+      {type: 'separator'},
+      {role: 'front'}
+    ]
+  }
+  
+  const menu = Menu.buildFromTemplate(template)
+  Menu.setApplicationMenu(menu)
+
+  // END OF MENU SECTION
 
   
 

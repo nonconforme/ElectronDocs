@@ -1,17 +1,23 @@
 ![Logo](https://cdn.rawgit.com/Vista1nik/GDocs/49cb3d76/assets/icons/web/312x312.png)
-## GDocs ##
+## ThunderDocs ##
+![Build Status](https://travis-ci.org/Vista1nik/GDocs.svg?branch=beta)](https://travis-ci.org/Vista1nik/GDocs)
+![Github All Releases](https://img.shields.io/github/downloads/Vista1nik/GDocs/total.svg)
 Unofficial Google Docs desktop app
+
+### Screenshot
+![](https://raw.githubusercontent.com/Vista1nik/vista1nik.github.io/master/gdocs/assets/images/gdocs-screenshot-833x634.png)
+
 
 **Run:**
  
 
-    npm install electron --save
+    npm install
     electron .
 
 **Build:**
 
-    npm install electron --save
-    npm install electron-packager --save
+    npm install
+    npm install electron-packager --save-dev
  Windows:
  
 
