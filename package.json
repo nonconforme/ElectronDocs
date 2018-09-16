@@ -1,9 +1,9 @@
 {
   "name": "ThunderDocs",
-  "version": "0.0.1",
+  "version": "1.5.0",
   "main": "main.js",
   "dependencies": {
-    "electron": "^1.8.4",
+    "electron": "^2.0.0",
     "eslint": "^5.4.0",
     "mocha": "^5.2.0",
     "spectron": "^3.8.0"
@@ -12,6 +12,7 @@
     "node": "9.2.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "electron ."
   }
 }
