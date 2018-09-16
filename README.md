@@ -1,4 +1,4 @@
-![Logo]()
+![Logo](https://cdn.rawgit.com/Vista1nik/ThunderDocs/5b58d421/assets/icons/web/320x320.png)
 ## ThunderDocs ##
 [![Build Status](https://travis-ci.org/Vista1nik/ThunderDocs.svg?branch=master)](https://travis-ci.org/Vista1nik/ThunderDocs)
  ![Github All Releases](https://img.shields.io/github/downloads/Vista1nik/GDocs/total.svg)
