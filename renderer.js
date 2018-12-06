@@ -2,6 +2,7 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 const { remote } = require('electron')
+const os = require('os')
 const mainProcess = remote.require('./main');
 const { BrowserWindow } = remote;
 
@@ -24,6 +25,8 @@ const popupwin = (targeturl) => {  // Create the browser window.
       mainWindow = null
     })}
 
+
+
 const webview = document.querySelector('webview')
   webview.addEventListener('new-window', (e) => {
      // if user click link...
@@ -34,3 +37,10 @@ const webview = document.querySelector('webview')
       require('electron').shell.openExternal(e.url)
     }
   })
+  
+const header = document.getElementById('header')
+
+if (os.platform() != 'darwin') {
+  header.style.display = 'none'
+  webview.style.marginTop = '0px'
+}
