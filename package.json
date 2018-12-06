@@ -5,18 +5,19 @@
   "dependencies": {
     "eslint": "^5.4.0",
     "mocha": "^5.2.0",
-    "spectron": "^3.8.0"
+    "spectron": "^3.8.0",
+    "electron": "3.0.10"
   },
   "engines": {
-    "node": "9.2.0"
+    "node": ">=9.2.0"
   },
   "scripts": {
     "test": "mocha",
     "start": "electron .",
-    "snap-build": "build --linux snap"
+    "build-win": "electron-packager . --overwrite --out=dist/ --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico"
   },
   "devDependencies": {
-    "electron": "^2.0.0",
-    "electron-builder": "^20.28.4"
+    "electron-builder": "^20.28.4",
+    "electron-packager": "^13.0.0"
   }
 }
