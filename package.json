@@ -2,11 +2,12 @@
   "name": "ThunderDocs",
   "version": "1.5.0",
   "main": "main.js",
+  "author": "Vista1nik",
+  "description": "Unofficial Google Docs app.",
   "dependencies": {
     "eslint": "^5.4.0",
     "mocha": "^5.2.0",
-    "spectron": "^3.8.0",
-    "electron": "3.0.10"
+    "spectron": "^3.8.0"
   },
   "engines": {
     "node": ">=9.2.0"
@@ -14,10 +15,20 @@
   "scripts": {
     "test": "mocha",
     "start": "electron .",
-    "build-win": "electron-packager . --overwrite --out=dist/ --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico"
+    "build-win": "electron-packager . --overwrite --out=dist/ --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico",
+    "build-snap": "build --linux snap"
   },
   "devDependencies": {
-    "electron-builder": "^20.38.4",
+    "electron": "^4",
+    "electron-builder": "^20.43.0",
     "electron-packager": "^13.0.0"
+  },
+  "build": {
+    "appId": "me.vista1nik.thunderdocs",     
+    "icon": "./assets/icons/png/512x512.png",
+
+    "snap": {
+      "category": "productivity"
+    }
   }
 }
