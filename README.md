@@ -4,6 +4,8 @@
  ![Github All Releases](https://img.shields.io/github/downloads/Vista1nik/GDocs/total.svg)
  ![Electron Version](https://img.shields.io/badge/Electron-1.8.4-brightgreen.svg)
  
+ [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/thunderdocs)
+ 
 Unofficial Google Docs desktop app
 
 ### Screenshot
