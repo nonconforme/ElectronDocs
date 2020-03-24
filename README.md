@@ -17,7 +17,6 @@ Unofficial Google Docs desktop application
 
 **Build:**
     npm install
-    npm install electron-packager --save-dev
  
  Windows:
     electron-packager . --overwrite --platform=win32 --arch=x64 --icon=assets/icons/win/icon.ico
